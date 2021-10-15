@@ -18,6 +18,7 @@ const education = document.getElementById("17");
 const assets = document.getElementById("18");
 const social = document.getElementById("19");
 const reachability = document.getElementById("20");
+const upButton = document.querySelector(".up");
 
 const profitTotalEl = document.querySelector(".profit-total");
 const prospectiveTotalEl = document.querySelector(".prospective-total");
@@ -185,3 +186,5 @@ reachability.addEventListener("blur", (e) => {
 	};
 	localStorage.setItem("credit-totals", JSON.stringify(totals));
 });
+
+upButton.addEventListener("click", () => window.scrollTo(0, 0));
