@@ -25,6 +25,10 @@ body {
   font-weight: bold;
 }
 
+body section {
+  color: black;
+}
+
 body nav {
   width: 100%;
   color: white;
