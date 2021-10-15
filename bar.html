@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="./js/width-changer.js" defer></script>
+		<link rel="stylesheet" href="./css/style.css" />
+		<title>Progress Bar</title>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li><a href="/">Chart</a></li>
+				<li><a href="bar.html">Bar</a></li>
+			</ul>
+		</nav>
+		<div class="inputs">
+			<input
+				type="number"
+				id="profit-width"
+				placeholder="profit width"
+				min="0"
+				max="50"
+			/>
+			<input
+				type="number"
+				id="prospective-width"
+				placeholder="prospective width"
+				min="0"
+				max="50"
+			/>
+			<input
+				type="number"
+				id="popular-width"
+				placeholder="popular width"
+				min="0"
+				max="50"
+			/>
+			<input
+				type="number"
+				id="picture-width"
+				placeholder="picture width"
+				min="0"
+				max="50"
+			/>
+		</div>
+		<div class="text">
+			<p class="p">Profitable</p>
+			<p class="p">Prospective</p>
+			<p class="p">Popular</p>
+			<p class="p">Picture</p>
+		</div>
+		<div class="bar">
+			<div class="progress"></div>
+		</div>
+	</body>
+</html>

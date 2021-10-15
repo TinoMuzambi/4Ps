@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;400;700&display=swap");
+
+$main-colour: #1b786e;
+
+* {
+	transition: 1s;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-family: "Lexend Deca", sans-serif;
+	font-weight: bold;
+
+	nav {
+		width: 100%;
+		color: white;
+
+		ul {
+			padding: 1rem;
+			display: flex;
+			justify-content: space-between;
+			list-style: none;
+			background: $main-colour;
+
+			a {
+				text-decoration: none;
+				color: white;
+			}
+		}
+	}
+
+	.title {
+		color: $main-colour;
+		align-self: flex-start;
+		margin: 0.5rem;
+		background: lighten($color: $main-colour, $amount: 50%);
+		padding: 1rem 2rem;
+		border-radius: 1rem;
+	}
+
+	.dashed,
+	.point,
+	.shaded,
+	.main {
+		aspect-ratio: 1;
+		border-radius: 50%;
+	}
+
+	.dashed {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px dashed $main-colour;
+		height: 75vh;
+
+		position: relative;
+
+		.point {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: $main-colour;
+			height: 25vh;
+			position: absolute;
+			z-index: 1;
+
+			&:first-child {
+				top: -10vh;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+
+			&:nth-child(2) {
+				left: -10vh;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+
+			&:nth-child(3) {
+				bottom: -10vh;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+
+			&:nth-child(4) {
+				right: -10vh;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+
+		.shaded {
+			height: 60vh;
+			background: lighten($color: $main-colour, $amount: 50%);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			z-index: 0;
+
+			&::after {
+				content: "";
+				background: white;
+				z-index: 1;
+				border-top-right-radius: 100%;
+				height: 30vh;
+				aspect-ratio: 1;
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+
+			.main {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 40vh;
+				background: $main-colour;
+				z-index: 2;
+				font-size: 2rem;
+			}
+		}
+	}
+
+	input {
+		padding: 1rem;
+		font: inherit;
+		border-radius: 1rem;
+		width: 5rem;
+		margin-top: 3rem;
+	}
+
+	.text {
+		color: $main-colour;
+		display: flex;
+		width: 87%;
+
+		.p:not(:first-child) {
+			margin-left: 19%;
+		}
+	}
+
+	.bar {
+		margin: 0rem 4rem 4rem 4rem;
+		border-radius: 10000rem;
+		background: linear-gradient(
+			to right,
+			rgba(255, 0, 0, 0.4),
+			rgba(255, 255, 0, 0.4),
+			rgba(10, 233, 10, 0.4)
+		);
+		z-index: 1;
+		width: 90%;
+		height: 3rem;
+		position: relative;
+
+		.progress {
+			position: absolute;
+			inset: 0;
+			background: linear-gradient(to right, red, orange);
+			opacity: 1;
+			z-index: 2;
+			color: rgb(201, 254, 78);
+			border-radius: 10000rem;
+		}
+	}
+}
