@@ -219,6 +219,10 @@ body .dashed .shaded .main {
   font-size: 2rem;
 }
 
+body .inputs {
+  margin-top: 2rem;
+}
+
 body input {
   padding: 1rem;
   font: inherit;
@@ -228,6 +232,7 @@ body input {
 }
 
 body .text {
+  margin: 1rem 0;
   color: #1b786e;
   display: -webkit-box;
   display: -ms-flexbox;

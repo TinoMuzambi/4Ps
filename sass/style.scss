@@ -176,6 +176,10 @@ body {
 		}
 	}
 
+	.inputs {
+		margin-top: 2rem;
+	}
+
 	input {
 		padding: 1rem;
 		font: inherit;
@@ -185,6 +189,7 @@ body {
 	}
 
 	.text {
+		margin: 1rem 0;
 		color: $main-colour;
 		display: flex;
 		width: 87%;
