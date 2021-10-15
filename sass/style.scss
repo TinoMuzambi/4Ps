@@ -193,6 +193,7 @@ body {
 
 	.inputs {
 		margin-top: 2rem;
+		padding: 2rem;
 	}
 
 	input {
@@ -211,6 +212,10 @@ body {
 
 		.p:not(:first-child) {
 			margin-left: 19%;
+
+			@media only screen and (max-width: 768px) {
+				margin-left: 5%;
+			}
 		}
 	}
 

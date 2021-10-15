@@ -241,6 +241,7 @@ body .dashed .shaded .main {
 
 body .inputs {
   margin-top: 2rem;
+  padding: 2rem;
 }
 
 body input {
@@ -262,6 +263,12 @@ body .text {
 
 body .text .p:not(:first-child) {
   margin-left: 19%;
+}
+
+@media only screen and (max-width: 768px) {
+  body .text .p:not(:first-child) {
+    margin-left: 5%;
+  }
 }
 
 body .bar {
