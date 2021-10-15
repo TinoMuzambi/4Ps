@@ -4,6 +4,16 @@ const popularWidth = document.getElementById("popular-width");
 const pictureWidth = document.getElementById("picture-width");
 const progress = document.querySelector(".progress");
 
+const inputs = document.querySelectorAll('input[type="number"');
+
+inputs.forEach((input) => {
+	input.addEventListener("change", (e) => {
+		const num = Number.parseInt(e.target.value);
+		if (num < 0) e.target.value = 0;
+		else if (num > 50) e.target.value = 50;
+	});
+});
+
 const totals = JSON.parse(localStorage.getItem("credit-totals"));
 let profitabilityTotal = totals.profitabilityTotal;
 let prospectiveTotal = totals.prospectiveTotal;

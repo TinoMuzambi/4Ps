@@ -20,6 +20,16 @@ const social = document.getElementById("19");
 const reachability = document.getElementById("20");
 const upButton = document.querySelector(".up");
 
+const inputs = document.querySelectorAll('input[type="number"');
+
+inputs.forEach((input) => {
+	input.addEventListener("change", (e) => {
+		const num = Number.parseInt(e.target.value);
+		if (num < 1) e.target.value = 1;
+		else if (num > 10) e.target.value = 10;
+	});
+});
+
 const profitTotalEl = document.querySelector(".profit-total");
 const prospectiveTotalEl = document.querySelector(".prospective-total");
 const popularTotalEl = document.querySelector(".popular-total");
