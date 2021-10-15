@@ -35,6 +35,107 @@ prospectiveTotalEl.innerText = `Total: 0`;
 popularTotalEl.innerText = `Total: 0`;
 pictureTotalEl.innerText = `Total: 0`;
 
+noEmployees.addEventListener("keydown", (e) => {
+	if (e && e.key == "Enter") {
+		growth.focus();
+	}
+});
+growth.addEventListener("keydown", (e) => {
+	if (e && e.key == "Enter") {
+		employee.focus();
+	}
+});
+employee.addEventListener("keydown", (e) => {
+	if (e && e.key == "Enter") {
+		revenue.focus();
+	}
+});
+revenue.addEventListener("keydown", (e) => {
+	if (e && e.key == "Enter") {
+		satisfaction.focus();
+	}
+});
+satisfaction.addEventListener("keydown", (e) => {
+	if (e && e.key == "Enter") {
+		original.focus();
+	}
+});
+original.addEventListener("keydown", (e) => {
+	if (e && e.key == "Enter") {
+		diversity.focus();
+	}
+});
+diversity.addEventListener("keydown", (e) => {
+	if (e && e.key == "Enter") {
+		values.focus();
+	}
+});
+values.addEventListener("keydown", (e) => {
+	if (e && e.key == "Enter") {
+		mission.focus();
+	}
+});
+mission.addEventListener("keydown", (e) => {
+	if (e && e.key == "Enter") {
+		goals.focus();
+	}
+});
+goals.addEventListener("keydown", (e) => {
+	if (e && e.key == "Enter") {
+		brand.focus();
+	}
+});
+brand.addEventListener("keydown", (e) => {
+	if (e && e.key == "Enter") {
+		logo.focus();
+	}
+});
+logo.addEventListener("keydown", (e) => {
+	if (e && e.key == "Enter") {
+		followers.focus();
+	}
+});
+followers.addEventListener("keydown", (e) => {
+	if (e && e.key == "Enter") {
+		posts.focus();
+	}
+});
+posts.addEventListener("keydown", (e) => {
+	if (e && e.key == "Enter") {
+		customer.focus();
+	}
+});
+customer.addEventListener("keydown", (e) => {
+	if (e && e.key == "Enter") {
+		innovative.focus();
+	}
+});
+innovative.addEventListener("keydown", (e) => {
+	if (e && e.key == "Enter") {
+		education.focus();
+	}
+});
+education.addEventListener("keydown", (e) => {
+	if (e && e.key == "Enter") {
+		assets.focus();
+	}
+});
+assets.addEventListener("keydown", (e) => {
+	if (e && e.key == "Enter") {
+		social.focus();
+	}
+});
+social.addEventListener("keydown", (e) => {
+	if (e && e.key == "Enter") {
+		reachability.focus();
+	}
+});
+reachability.addEventListener("keydown", (e) => {
+	if (e && e.key == "Enter") {
+		window.location = "/bar.html";
+	}
+});
+
 noEmployees.addEventListener("blur", (e) => {
 	const num = Number.parseInt(e.target.value);
 	if (num) {
