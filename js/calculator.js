@@ -177,4 +177,11 @@ reachability.addEventListener("blur", (e) => {
 		pictureTotal += num;
 		pictureTotalEl.innerText = `Total: ${pictureTotal}`;
 	}
+	const totals = {
+		profitabilityTotal,
+		prospectiveTotal,
+		popularTotal,
+		pictureTotal,
+	};
+	localStorage.setItem("credit-totals", JSON.stringify(totals));
 });

@@ -27,6 +27,53 @@ body {
 
 body section {
   color: black;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 4fr 1fr 3fr;
+      grid-template-columns: 1fr 4fr 1fr 3fr;
+  margin: 0 2rem;
+  gap: 2rem;
+  border-bottom: 1px solid #1b786e;
+  padding: 1rem 0;
+}
+
+body section .title {
+  width: 10vw;
+}
+
+body section .title,
+body section .total,
+body section .comments {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+body section .items .item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 1fr;
+      grid-template-columns: 3fr 1fr;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+body section .items .item input {
+  padding: 0.5rem;
+}
+
+body section .comments textarea {
+  resize: none;
+  outline: none;
+  background: #a7ebe4;
+  color: #1b786e;
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  font: inherit;
+  font-weight: 400;
 }
 
 body nav {

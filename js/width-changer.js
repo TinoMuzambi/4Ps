@@ -4,31 +4,39 @@ const popularWidth = document.getElementById("popular-width");
 const pictureWidth = document.getElementById("picture-width");
 const progress = document.querySelector(".progress");
 
-let currentProfitWidth = 0;
-let currentProspectiveWidth = 0;
-let currentPopularWidth = 0;
-let currentPictureWidth = 0;
+const totals = JSON.parse(localStorage.getItem("credit-totals"));
+let profitabilityTotal = totals.profitabilityTotal;
+let prospectiveTotal = totals.prospectiveTotal;
+let popularTotal = totals.popularTotal;
+let pictureTotal = totals.pictureTotal;
 
-profitWidth.value = currentProfitWidth;
-prospectiveWidth.value = currentProspectiveWidth;
-popularWidth.value = currentPopularWidth;
-pictureWidth.value = currentPictureWidth;
-
-progress.style.width = `${
-	(currentProfitWidth +
-		currentProspectiveWidth +
-		currentPopularWidth +
-		currentPictureWidth) /
-	2
-}%`;
+profitWidth.value = profitabilityTotal;
+prospectiveWidth.value = prospectiveTotal;
+popularWidth.value = popularTotal;
+pictureWidth.value = pictureTotal;
+const total =
+	Number.parseInt(profitabilityTotal) +
+	Number.parseInt(prospectiveTotal) +
+	Number.parseInt(popularTotal) +
+	Number.parseInt(pictureTotal);
+if (total > 50 && total < 100) {
+	progress.style.background = "linear-gradient(to right, red, orange, yellow)";
+} else if (total > 100 && total < 150) {
+	progress.style.background =
+		"linear-gradient(to right, red, orange, yellow, lime)";
+} else if (total > 150) {
+	progress.style.background =
+		"linear-gradient(to right, red, orange, yellow, lime, rgb(10, 233, 10))";
+}
+progress.style.width = `${total / 2}%`;
 
 profitWidth.addEventListener("change", (e) => {
-	currentProfitWidth = e.target.value;
+	profitabilityTotal = e.target.value;
 	const total =
-		Number.parseInt(currentProfitWidth) +
-		Number.parseInt(currentProspectiveWidth) +
-		Number.parseInt(currentPopularWidth) +
-		Number.parseInt(currentPictureWidth);
+		Number.parseInt(profitabilityTotal) +
+		Number.parseInt(prospectiveTotal) +
+		Number.parseInt(popularTotal) +
+		Number.parseInt(pictureTotal);
 
 	if (total > 50 && total < 100) {
 		progress.style.background =
@@ -43,12 +51,12 @@ profitWidth.addEventListener("change", (e) => {
 	progress.style.width = `${total / 2}%`;
 });
 prospectiveWidth.addEventListener("change", (e) => {
-	currentProspectiveWidth = e.target.value;
+	prospectiveTotal = e.target.value;
 	const total =
-		Number.parseInt(currentProfitWidth) +
-		Number.parseInt(currentProspectiveWidth) +
-		Number.parseInt(currentPopularWidth) +
-		Number.parseInt(currentPictureWidth);
+		Number.parseInt(profitabilityTotal) +
+		Number.parseInt(prospectiveTotal) +
+		Number.parseInt(popularTotal) +
+		Number.parseInt(pictureTotal);
 	if (total > 50 && total < 100) {
 		progress.style.background =
 			"linear-gradient(to right, red, orange, yellow)";
@@ -62,12 +70,12 @@ prospectiveWidth.addEventListener("change", (e) => {
 	progress.style.width = `${total / 2}%`;
 });
 popularWidth.addEventListener("change", (e) => {
-	currentPopularWidth = e.target.value;
+	popularTotal = e.target.value;
 	const total =
-		Number.parseInt(currentProfitWidth) +
-		Number.parseInt(currentProspectiveWidth) +
-		Number.parseInt(currentPopularWidth) +
-		Number.parseInt(currentPictureWidth);
+		Number.parseInt(profitabilityTotal) +
+		Number.parseInt(prospectiveTotal) +
+		Number.parseInt(popularTotal) +
+		Number.parseInt(pictureTotal);
 	if (total > 50 && total < 100) {
 		progress.style.background =
 			"linear-gradient(to right, red, orange, yellow)";
@@ -81,12 +89,12 @@ popularWidth.addEventListener("change", (e) => {
 	progress.style.width = `${total / 2}%`;
 });
 pictureWidth.addEventListener("change", (e) => {
-	currentPictureWidth = e.target.value;
+	pictureTotal = e.target.value;
 	const total =
-		Number.parseInt(currentProfitWidth) +
-		Number.parseInt(currentProspectiveWidth) +
-		Number.parseInt(currentPopularWidth) +
-		Number.parseInt(currentPictureWidth);
+		Number.parseInt(profitabilityTotal) +
+		Number.parseInt(prospectiveTotal) +
+		Number.parseInt(popularTotal) +
+		Number.parseInt(pictureTotal);
 	if (total > 50 && total < 100) {
 		progress.style.background =
 			"linear-gradient(to right, red, orange, yellow)";
