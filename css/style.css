@@ -151,6 +151,13 @@ body .dashed {
   position: relative;
 }
 
+@media only screen and (max-width: 768px) {
+  body .dashed {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+
 body .dashed .point {
   display: -webkit-box;
   display: -ms-flexbox;

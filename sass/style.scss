@@ -121,8 +121,11 @@ body {
 		justify-content: center;
 		border: 1px dashed $main-colour;
 		height: 75vh;
-
 		position: relative;
+
+		@media only screen and (max-width: 768px) {
+			transform: scale(0.5);
+		}
 
 		.point {
 			display: flex;
