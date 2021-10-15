@@ -91,6 +91,12 @@ body {
 		background: lighten($color: $main-colour, $amount: 50%);
 		padding: 1rem 2rem;
 		border-radius: 1rem;
+
+		&.link {
+			margin-left: auto;
+			margin-right: 7rem;
+			text-decoration: none;
+		}
 	}
 
 	.dashed,

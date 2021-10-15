@@ -109,6 +109,12 @@ body .title {
   border-radius: 1rem;
 }
 
+body .title.link {
+  margin-left: auto;
+  margin-right: 7rem;
+  text-decoration: none;
+}
+
 body .dashed,
 body .point,
 body .shaded,
