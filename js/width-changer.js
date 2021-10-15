@@ -1,3 +1,4 @@
+// Grab DOM elements.
 const profitWidth = document.getElementById("profit-width");
 const prospectiveWidth = document.getElementById("prospective-width");
 const popularWidth = document.getElementById("popular-width");
@@ -6,6 +7,9 @@ const progress = document.querySelector(".progress");
 
 const inputs = document.querySelectorAll('input[type="number"');
 
+/**
+ * Add event listeners for preventing nonsensical input.
+ */
 inputs.forEach((input) => {
 	input.addEventListener("change", (e) => {
 		const num = Number.parseInt(e.target.value);
@@ -14,12 +18,14 @@ inputs.forEach((input) => {
 	});
 });
 
+// Get totals from local storage.
 const totals = JSON.parse(localStorage.getItem("credit-totals"));
 let profitabilityTotal = totals.profitabilityTotal;
 let prospectiveTotal = totals.prospectiveTotal;
 let popularTotal = totals.popularTotal;
 let pictureTotal = totals.pictureTotal;
 
+// Initialise values.
 profitWidth.value = profitabilityTotal;
 prospectiveWidth.value = prospectiveTotal;
 popularWidth.value = popularTotal;
@@ -40,6 +46,7 @@ if (total > 50 && total < 100) {
 }
 progress.style.width = `${total / 2}%`;
 
+// Adds change event listeners for changing totals.
 profitWidth.addEventListener("change", (e) => {
 	profitabilityTotal = e.target.value;
 	const total =

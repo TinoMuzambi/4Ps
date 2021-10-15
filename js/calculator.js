@@ -1,3 +1,4 @@
+// Grab DOM elements.
 const noEmployees = document.getElementById("1");
 const growth = document.getElementById("2");
 const employee = document.getElementById("3");
@@ -22,6 +23,14 @@ const upButton = document.querySelector(".up");
 
 const inputs = document.querySelectorAll('input[type="number"');
 
+const profitTotalEl = document.querySelector(".profit-total");
+const prospectiveTotalEl = document.querySelector(".prospective-total");
+const popularTotalEl = document.querySelector(".popular-total");
+const pictureTotalEl = document.querySelector(".picture-total");
+
+/**
+ * Add event listeners for preventing nonsensical input.
+ */
 inputs.forEach((input) => {
 	input.addEventListener("change", (e) => {
 		const num = Number.parseInt(e.target.value);
@@ -30,11 +39,7 @@ inputs.forEach((input) => {
 	});
 });
 
-const profitTotalEl = document.querySelector(".profit-total");
-const prospectiveTotalEl = document.querySelector(".prospective-total");
-const popularTotalEl = document.querySelector(".popular-total");
-const pictureTotalEl = document.querySelector(".picture-total");
-
+// Initialise elements.
 let profitabilityTotal = 0;
 let prospectiveTotal = 0;
 let popularTotal = 0;
@@ -45,6 +50,7 @@ prospectiveTotalEl.innerText = `Total: 0`;
 popularTotalEl.innerText = `Total: 0`;
 pictureTotalEl.innerText = `Total: 0`;
 
+// Adds event listeners for changing focus on enter press.
 noEmployees.addEventListener("keydown", (e) => {
 	if (e && e.key == "Enter") {
 		growth.focus();
@@ -146,6 +152,7 @@ reachability.addEventListener("keydown", (e) => {
 	}
 });
 
+// Adds blur event listeners for changing totals.
 noEmployees.addEventListener("blur", (e) => {
 	const num = Number.parseInt(e.target.value);
 	if (num) {
@@ -289,6 +296,7 @@ reachability.addEventListener("blur", (e) => {
 		pictureTotal += num;
 		pictureTotalEl.innerText = `Total: ${pictureTotal}`;
 	}
+	// Save totals to local storage.
 	const totals = {
 		profitabilityTotal,
 		prospectiveTotal,
@@ -298,4 +306,5 @@ reachability.addEventListener("blur", (e) => {
 	localStorage.setItem("credit-totals", JSON.stringify(totals));
 });
 
+// Up button for scrolling to top.
 upButton.addEventListener("click", () => window.scrollTo(0, 0));
