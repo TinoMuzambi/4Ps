@@ -1,0 +1,51 @@
+.inputs {
+	margin-top: 2rem;
+	padding: 2rem;
+}
+
+input {
+	padding: 1rem;
+	font: inherit;
+	border-radius: 1rem;
+	width: 5rem;
+	margin-top: 3rem;
+}
+
+.text {
+	margin: 1rem 0;
+	color: $main-colour;
+	display: flex;
+	width: 87%;
+
+	.p:not(:first-child) {
+		margin-left: 19%;
+
+		@media only screen and (max-width: 768px) {
+			margin-left: 5%;
+		}
+	}
+}
+
+.bar {
+	margin: 0rem 4rem 4rem 4rem;
+	border-radius: 10000rem;
+	background: linear-gradient(
+		to right,
+		rgba(255, 0, 0, 0.15),
+		rgba(255, 255, 0, 0.15),
+		rgba(10, 233, 10, 0.15)
+	);
+	z-index: 1;
+	width: 90%;
+	height: 3rem;
+	position: relative;
+
+	.progress {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(to right, red, orange);
+		opacity: 1;
+		z-index: 2;
+		border-radius: 10000rem;
+	}
+}

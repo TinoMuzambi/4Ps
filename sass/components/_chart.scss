@@ -1,0 +1,101 @@
+.title {
+	color: $main-colour;
+	align-self: flex-start;
+	margin: 0.5rem;
+	background: lighten($color: $main-colour, $amount: 50%);
+	padding: 1rem 2rem;
+	border-radius: 1rem;
+
+	&.link {
+		margin-left: auto;
+		margin-right: 7rem;
+		text-decoration: none;
+	}
+}
+
+.dashed,
+.point,
+.shaded,
+.main {
+	aspect-ratio: 1;
+	border-radius: 50%;
+}
+
+.dashed {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px dashed $main-colour;
+	height: 75vh;
+	position: relative;
+
+	@media only screen and (max-width: 768px) {
+		transform: scale(0.5);
+	}
+
+	.point {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: $main-colour;
+		height: 25vh;
+		position: absolute;
+		z-index: 1;
+
+		&:first-child {
+			top: -10vh;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		&:nth-child(2) {
+			left: -10vh;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		&:nth-child(3) {
+			bottom: -10vh;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		&:nth-child(4) {
+			right: -10vh;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+
+	.shaded {
+		height: 60vh;
+		background: lighten($color: $main-colour, $amount: 50%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		z-index: 0;
+
+		&::after {
+			content: "";
+			background: white;
+			z-index: 1;
+			border-top-right-radius: 100%;
+			height: 30vh;
+			aspect-ratio: 1;
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+
+		.main {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 40vh;
+			background: $main-colour;
+			z-index: 2;
+			font-size: 2rem;
+		}
+	}
+}
