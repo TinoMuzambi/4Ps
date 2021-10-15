@@ -38,6 +38,13 @@ body section {
   padding: 1rem 0;
 }
 
+@media only screen and (max-width: 768px) {
+  body section {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
 body section .title {
   width: 10vw;
 }
@@ -269,7 +276,6 @@ body .bar .progress {
   background: linear-gradient(to right, red, orange);
   opacity: 1;
   z-index: 2;
-  color: yellow;
   border-radius: 10000rem;
 }
 
