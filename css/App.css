@@ -7,7 +7,7 @@
   scroll-behavior: smooth;
 }
 
-.body {
+body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,12 +26,12 @@
   font-weight: bold;
 }
 
-.body nav {
+body nav {
   width: 100%;
   color: white;
 }
 
-.body nav ul {
+body nav ul {
   padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -43,12 +43,12 @@
   background: #1b786e;
 }
 
-.body nav ul a {
+body nav ul a {
   text-decoration: none;
   color: white;
 }
 
-.body .up {
+body .up {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
