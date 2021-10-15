@@ -34,6 +34,10 @@ body {
 
 		.title {
 			width: 10vw;
+
+			@media only screen and (max-width: 768px) {
+				width: unset;
+			}
 		}
 
 		.title,

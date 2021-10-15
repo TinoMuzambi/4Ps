@@ -49,6 +49,12 @@ body section .title {
   width: 10vw;
 }
 
+@media only screen and (max-width: 768px) {
+  body section .title {
+    width: unset;
+  }
+}
+
 body section .title,
 body section .total,
 body section .comments {
