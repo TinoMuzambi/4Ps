@@ -40,7 +40,7 @@ body nav ul {
       -ms-flex-pack: justify;
           justify-content: space-between;
   list-style: none;
-  background: #1b786e;
+  background: #d83828;
 }
 
 body nav ul a {
@@ -71,11 +71,11 @@ body .up {
 }
 
 .title {
-  color: #1b786e;
+  color: #d83828;
   -ms-flex-item-align: start;
       align-self: flex-start;
   margin: 0.5rem;
-  background: #a7ebe4;
+  background: #f7d8d5;
   padding: 1rem 2rem;
   border-radius: 1rem;
 }
@@ -104,7 +104,7 @@ body .up {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 1px dashed #1b786e;
+  border: 1px dashed #d83828;
   height: 75vh;
   position: relative;
 }
@@ -126,7 +126,7 @@ body .up {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: #1b786e;
+  background: #d83828;
   height: 25vh;
   position: absolute;
   z-index: 1;
@@ -162,7 +162,7 @@ body .up {
 
 .dashed .shaded {
   height: 60vh;
-  background: #a7ebe4;
+  background: #f7d8d5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -199,7 +199,7 @@ body .up {
       -ms-flex-pack: center;
           justify-content: center;
   height: 40vh;
-  background: #1b786e;
+  background: #d83828;
   z-index: 2;
   font-size: 2rem;
 }
@@ -219,7 +219,7 @@ input {
 
 .text {
   margin: 1rem 0;
-  color: #1b786e;
+  color: #d83828;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -265,7 +265,7 @@ section {
       grid-template-columns: 1fr 4fr 1fr 3fr;
   margin: 0 2rem;
   gap: 2rem;
-  border-bottom: 1px solid #1b786e;
+  border-bottom: 1px solid #d83828;
   padding: 1rem 0;
 }
 
@@ -311,8 +311,8 @@ section .items .item input {
 section .comments textarea {
   resize: none;
   outline: none;
-  background: #a7ebe4;
-  color: #1b786e;
+  background: white;
+  color: #d83828;
   border: none;
   border-radius: 1rem;
   padding: 1rem;
