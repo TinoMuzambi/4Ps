@@ -149,6 +149,14 @@ social.addEventListener("keydown", (e) => {
 reachability.addEventListener("keydown", (e) => {
 	if (e && e.key == "Enter") {
 		window.location = "/bar.html";
+		// Save totals to local storage.
+		const totals = {
+			profitabilityTotal,
+			prospectiveTotal,
+			popularTotal,
+			pictureTotal,
+		};
+		localStorage.setItem("credit-totals", JSON.stringify(totals));
 	}
 });
 
