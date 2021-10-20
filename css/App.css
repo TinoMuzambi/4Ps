@@ -315,7 +315,7 @@ section .items .item input {
 section .comments textarea {
   resize: none;
   outline: none;
-  background: white;
+  background: #f7d8d5;
   color: #d83828;
   border: none;
   border-radius: 1rem;
